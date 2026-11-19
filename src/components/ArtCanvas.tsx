@@ -78,11 +78,19 @@ export function ArtCanvas({
     handleVisibility();
     if (title && document.fonts) {
       const families = titleFont === 'serif' ? [family, 'Noto Serif SC'] : [family];
-      void Promise.allSettled(
-        families.map((name) => document.fonts.load(`${fontStyle} 24px "${name}"`, title)),
-      ).then(() => {
-        if (!disposed && !document.hidden) paint();
-      });
+      // User-entered titles may contain glyphs outside the interface font subsets.
+      void import('../styles/artwork-fonts.css')
+        .then(() =>
+          Promise.allSettled(
+            families.map((name) => document.fonts.load(`${fontStyle} 24px "${name}"`, title)),
+          ),
+        )
+        .then(() => {
+          if (!disposed && !document.hidden) paint();
+        })
+        .catch(() => {
+          /* The canvas already contains the fallback-font rendering. */
+        });
     }
     return () => {
       disposed = true;

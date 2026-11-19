@@ -1,11 +1,11 @@
 .bloom-heading {
-  font-family: 'Zhi Mang Xing', 'Ma Shan Zheng', 'Noto Serif SC', cursive;
+  font-family: 'Bloom Brush', 'Ma Shan Zheng', 'Bloom Serif', cursive;
   font-size: clamp(2.65rem, 8.7vw, 8.5rem);
   font-weight: 400;
   line-height: 1.1;
 }
 .bloom-heading:lang(en) {
-  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  font-family: 'Bloom Italic', 'Bloom Display', Georgia, serif;
   font-size: clamp(2.9rem, 7.8vw, 7.6rem);
   font-style: italic;
   font-weight: 600;
@@ -35,8 +35,8 @@
   --color-foreground: var(--sb-text);
   --color-muted: var(--sb-muted);
   --color-accent: var(--sb-accent);
-  --font-sans: 'Noto Sans SC', ui-sans-serif, system-ui, sans-serif;
-  --font-display: 'Playfair Display', 'Noto Serif SC', ui-serif, Georgia, serif;
+  --font-sans: 'Bloom Text', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Bloom Display', 'Bloom Serif', ui-serif, Georgia, serif;
 }
 @media (prefers-reduced-motion: no-preference) {
   [data-slot='accordion-content'][data-state='open'] {
@@ -64,7 +64,7 @@
   --sb-muted: #c6b9ab;
   --sb-border: #e3cdb92d;
   --sb-accent: #cfab8d;
-  font-family: 'Noto Sans SC', sans-serif;
+  font-family: 'Bloom Text', sans-serif;
   color: #f3ece1;
   background: #211d1c;
   font-synthesis: none;

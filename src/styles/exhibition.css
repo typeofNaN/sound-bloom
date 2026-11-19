@@ -22,7 +22,7 @@
   background: currentColor;
 }
 .exhibit .bloom-heading {
-  font-family: 'Noto Serif SC', 'Songti SC', SimSun, serif;
+  font-family: 'Bloom Headline', 'Bloom Serif', 'Songti SC', SimSun, serif;
   font-size: clamp(3.3rem, 6.4vw, 6.2rem);
   line-height: 1.16;
   letter-spacing: -0.055em;
@@ -33,16 +33,16 @@
 }
 .exhibit .bloom-heading em {
   color: var(--sb-accent);
-  font-family: 'Zhi Mang Xing', 'Kaiti SC', KaiTi, serif;
+  font-family: 'Bloom Brush', 'Kaiti SC', KaiTi, serif;
   font-style: normal;
 }
 .exhibit .bloom-heading:lang(en) {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Bloom Display', Georgia, serif;
   font-style: normal;
   font-size: clamp(3.3rem, 5.6vw, 5.5rem);
 }
 .exhibit .bloom-heading:lang(en) em {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Bloom Italic', Georgia, serif;
   font-style: italic;
 }
 .exhibit-print {
@@ -70,7 +70,7 @@
   line-height: 1.35;
 }
 .app .brand {
-  font-family: 'Playfair Display', 'Songti SC', Georgia, serif;
+  font-family: 'Bloom Display', 'Songti SC', Georgia, serif;
   letter-spacing: -0.035em;
 }
 .app .studio :is(.left-panel, .inspector) h3 {

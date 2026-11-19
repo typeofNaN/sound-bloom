@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Bloom Brush';
+  src: url('../assets/fonts/brush.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bloom Headline';
+  src: url('../assets/fonts/headline.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bloom Serif';
+  src: url('../assets/fonts/serif.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bloom Display';
+  src: url('../assets/fonts/display.woff2?no-inline') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bloom Italic';
+  src: url('../assets/fonts/italic.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bloom Text';
+  src: url('../assets/fonts/text.woff2') format('woff2');
+  font-weight: 300 600;
+  font-style: normal;
+  font-display: swap;
+}

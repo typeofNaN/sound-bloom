@@ -77,7 +77,7 @@
   max-width: 670px;
 }
 .signature {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Bloom Display', serif;
   font-style: italic;
   color: #dfb98c;
   font-size: 15px;
@@ -222,7 +222,7 @@
   font-weight: 400;
 }
 .style-card em {
-  font: italic 12px 'Playfair Display';
+  font: italic 12px 'Bloom Display';
   color: #88799a;
 }
 .process {
