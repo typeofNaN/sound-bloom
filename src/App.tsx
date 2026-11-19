@@ -4,6 +4,7 @@ import { Toaster } from './components/ui/sonner';
 import { ExportDialog } from './components/ExportDialog';
 import { HomePage } from './pages/HomePage';
 import { StudioPage } from './pages/studio/StudioPage';
+import { useSoundLab } from './hooks/useSoundLab';
 import { useAudioTrack } from './hooks/useAudioTrack';
 import { useArtworkSettings } from './hooks/useArtworkSettings';
 import { palettes } from './data/artStyles';
@@ -59,7 +60,8 @@ function SoundBloom() {
   }, [en]);
   const exportDialog = useRef<HTMLDialogElement>(null);
   const audio = useAudioTrack(en);
-  const settings = useArtworkSettings(audio.features, style, en);
+  const lab = useSoundLab(audio.features, en);
+  const settings = useArtworkSettings(lab.features, style, en);
   const frame = {
     features: settings.artworkFeatures,
     style,
@@ -95,6 +97,7 @@ function SoundBloom() {
           onHome={() => setPage('home')}
           onExport={() => exportDialog.current?.showModal()}
           audio={audio}
+          lab={lab}
           settings={settings}
         />
       ) : (

@@ -3,17 +3,31 @@ import { Slider } from '../../components/ui/slider';
 import { Button } from '../../components/ui/button';
 import { formatTime } from '../../lib/formatTime';
 import type { AudioTrack } from '../../hooks/useAudioTrack';
-export function Player({ en, audio }: { en: boolean; audio: AudioTrack }) {
+export function Player({
+  en,
+  audio,
+  onBeforePlay,
+  secondaryActive,
+}: {
+  en: boolean;
+  audio: AudioTrack;
+  onBeforePlay?: () => void;
+  secondaryActive?: boolean;
+}) {
   const { playing, position, duration, features, togglePlayback, seek } = audio;
   return (
     <footer className="player">
       <Button
         className="play"
-        onClick={togglePlayback}
+        onClick={() => {
+          onBeforePlay?.();
+          togglePlayback();
+        }}
         aria-label={playing ? (en ? 'Pause' : '暂停') : en ? 'Play' : '播放'}
       >
         {playing ? <Pause /> : <Play />}
       </Button>
+      {secondaryActive && <span className="player-source">{en ? 'Original audio' : '原声试听'}</span>}
       <span className="tabular-nums">{formatTime(position)}</span>
       <div className="relative flex h-10 min-w-0 flex-1 items-center">
         <svg

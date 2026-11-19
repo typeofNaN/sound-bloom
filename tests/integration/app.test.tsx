@@ -116,3 +116,20 @@ it.each(['/#/missing', '/#/studio/missing?style=bloom', '/missing'])(
     expect(screen.getByRole('link', { name: '返回首页' })).toHaveAttribute('href', '/#/');
   },
 );
+
+it('lets users combine a second local example, switch inheritance and remove it', () => {
+  window.history.replaceState(null, '', '/#/studio');
+  render(<App />);
+  fireEvent.click(screen.getByRole('button', { name: /添加第二段声音/ }));
+  fireEvent.click(screen.getByRole('button', { name: '先试试示例' }));
+  expect(screen.getByRole('button', { name: /交融/ })).toHaveAttribute('aria-pressed', 'true');
+  fireEvent.click(screen.getByRole('button', { name: /织入/ }));
+  expect(screen.getByRole('button', { name: /织入/ })).toHaveAttribute('aria-pressed', 'true');
+  fireEvent.keyDown(screen.getByRole('slider', { name: '第二段声音参与度' }), { key: 'ArrowRight' });
+  expect(screen.getByText('51% 第二声')).toBeInTheDocument();
+  fireEvent.click(screen.getByRole('button', { name: '原声作品' }));
+  expect(screen.getByRole('button', { name: '原声作品' })).toHaveAttribute('aria-pressed', 'true');
+  fireEvent.click(screen.getByRole('button', { name: '双声作品' }));
+  fireEvent.click(screen.getByRole('button', { name: '移除第二段声音' }));
+  expect(screen.queryByRole('slider', { name: '第二段声音参与度' })).not.toBeInTheDocument();
+});

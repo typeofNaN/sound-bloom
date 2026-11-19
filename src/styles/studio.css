@@ -254,3 +254,229 @@
   font-size: 9px;
   color: var(--sb-muted);
 }
+
+.studio-inspector {
+  overflow-y: auto;
+  min-height: 0;
+  background: var(--sb-panel);
+}
+.studio-inspector .inspector {
+  overflow: visible;
+}
+.studio-mobile-nav {
+  display: none;
+}
+.sound-composition {
+  margin: 18px 0 24px;
+  border-bottom: 1px solid var(--sb-border);
+  padding-bottom: 20px;
+}
+.sound-composition button {
+  font-size: 11px;
+}
+.sound-composition svg:not(.voice-wave) {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+.sound-composition .add-voice {
+  width: 100%;
+  padding: 11px 0;
+  display: flex;
+  gap: 7px;
+  justify-content: flex-start;
+  color: var(--sb-text);
+}
+.add-voice span {
+  font-size: 9px;
+  margin-left: auto;
+  color: var(--sb-muted);
+}
+.voice-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.voice-heading h3 {
+  margin: 0 !important;
+}
+.voice-icon {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+}
+.voice-hint {
+  font-size: 11px;
+  line-height: 1.8;
+  color: var(--sb-muted);
+  margin: 10px 0 14px;
+}
+.voice-track {
+  margin: 10px 0;
+  padding: 12px;
+  background: var(--sb-surface);
+  border-radius: 8px;
+}
+.voice-track-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+}
+.voice-track-title span {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.voice-track-title small {
+  font-size: 9px;
+  color: var(--sb-muted);
+}
+.voice-wave {
+  width: 100%;
+  height: 32px;
+  margin: 10px 0 3px;
+  color: var(--sb-accent);
+  opacity: 0.75;
+}
+.voice-preview {
+  display: flex;
+  gap: 6px;
+  color: var(--sb-muted);
+  padding: 4px 0;
+  height: auto;
+}
+.voice-imports {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+.voice-imports button {
+  display: flex;
+  gap: 6px;
+  padding: 7px 4px;
+  height: 32px;
+  border: 1px solid var(--sb-border);
+  border-radius: 6px;
+}
+.composition-settings {
+  margin-top: 22px;
+}
+.composition-settings h3 {
+  margin: 0 0 10px !important;
+}
+.composition-modes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3px;
+  background: var(--sb-surface);
+  border-radius: 8px;
+  gap: 3px;
+}
+.composition-modes button {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 2px;
+  border-radius: 5px;
+  color: var(--sb-muted);
+}
+.composition-modes b {
+  font-size: 12px;
+  font-weight: 500;
+}
+.composition-modes span {
+  font-size: 9px;
+}
+.composition-modes button[aria-pressed='true'] {
+  background: var(--sb-panel-strong);
+  color: var(--sb-text);
+}
+.composition-balance {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  margin: 18px 0 10px;
+  color: var(--sb-muted);
+}
+.composition-balance output {
+  color: var(--sb-text);
+}
+.voice-feedback {
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.voice-error {
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--sb-text);
+  border-left: 2px solid var(--sb-accent);
+  padding-left: 8px;
+}
+.canvas-comparison {
+  position: absolute;
+  bottom: 36px;
+  z-index: 2;
+  display: flex;
+  padding: 3px;
+  border: 1px solid var(--sb-border);
+  border-radius: 20px;
+  background: var(--sb-panel);
+  box-shadow: 0 4px 16px #0002;
+}
+.canvas-comparison button {
+  border-radius: 16px;
+  padding: 6px 14px;
+  height: auto;
+  font-size: 10px;
+  color: var(--sb-muted);
+}
+.canvas-comparison button[aria-pressed='true'] {
+  background: var(--sb-panel-strong);
+  color: var(--sb-text);
+}
+.player-source {
+  font-size: 10px;
+  white-space: nowrap;
+}
+.studio:has(.canvas-comparison) .canvas-stage {
+  padding-bottom: 90px;
+}
+
+.sound-sources .voice-heading h3,
+.sound-sources .composition-settings h3 {
+  font-size: 11px;
+  padding-bottom: 0;
+  border: 0;
+  line-height: 1.4;
+}
+.sound-sources .sound-composition {
+  margin-top: 14px;
+  padding-bottom: 14px;
+}
+.sound-sources .voice-track {
+  padding: 10px;
+  margin: 8px 0;
+}
+.sound-sources .voice-wave {
+  height: 24px;
+  margin: 7px 0 0;
+}
+.sound-sources .composition-settings {
+  margin-top: 14px;
+}
+.sound-sources .composition-modes button {
+  padding: 7px 2px;
+}
+.sound-sources .composition-balance {
+  margin-top: 12px;
+}
+.sound-sources .voice-hint {
+  margin-bottom: 0;
+  font-size: 10px;
+}
