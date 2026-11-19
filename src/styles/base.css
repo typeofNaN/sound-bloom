@@ -1,0 +1,148 @@
+.bloom-heading {
+  font-family: 'Zhi Mang Xing', 'Ma Shan Zheng', 'Noto Serif SC', cursive;
+  font-size: clamp(2.65rem, 8.7vw, 8.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+.bloom-heading:lang(en) {
+  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.9rem, 7.8vw, 7.6rem);
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .page-enter {
+    animation: page-enter 220ms ease-out both;
+  }
+}
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@theme inline {
+  --color-ring: var(--sb-accent);
+  --color-muted-foreground: var(--sb-muted);
+  --color-surface: var(--sb-surface);
+  --color-panel: var(--sb-panel);
+  --color-foreground: var(--sb-text);
+  --color-muted: var(--sb-muted);
+  --color-accent: var(--sb-accent);
+  --font-sans: 'Noto Sans SC', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Playfair Display', 'Noto Serif SC', ui-serif, Georgia, serif;
+}
+@media (prefers-reduced-motion: no-preference) {
+  [data-slot='accordion-content'][data-state='open'] {
+    animation: accordion-open 180ms ease-out;
+  }
+  [data-slot='accordion-content'][data-state='closed'] {
+    animation: accordion-open 150ms ease-in reverse;
+  }
+}
+@keyframes accordion-open {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+:root {
+  --sb-surface: #211d1c;
+  --sb-panel: #2c2624;
+  --sb-panel-strong: #39302c;
+  --sb-text: #f3ece1;
+  --sb-muted: #c6b9ab;
+  --sb-border: #e3cdb92d;
+  --sb-accent: #cfab8d;
+  font-family: 'Noto Sans SC', sans-serif;
+  color: #f3ece1;
+  background: #211d1c;
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+}
+button,
+a,
+input {
+  font: inherit;
+}
+button,
+a {
+  color: inherit;
+}
+.app {
+  min-height: 100vh;
+  background: #211d1c;
+  color: #f3ece1;
+  transition: 0.3s;
+}
+.app.light {
+  --sb-surface: #f4efe5;
+  --sb-panel: #fcf8ef;
+  --sb-panel-strong: #e9e0d3;
+  --sb-text: #322925;
+  --sb-muted: #675a52;
+  --sb-border: #66513e33;
+  --sb-accent: #784735;
+  background: var(--sb-surface);
+  color: var(--sb-text);
+}
+.app.light .hero,
+.app.light .style-section,
+.app.light .process,
+.app.light > footer,
+.app.light .studio,
+.app.light .canvas-stage {
+  background: var(--sb-surface);
+  color: var(--sb-text);
+}
+.app.light .studio-top,
+.app.light .left-panel,
+.app.light .inspector,
+.app.light .player {
+  background: var(--sb-panel);
+  color: var(--sb-text);
+  border-color: var(--sb-border);
+}
+.app.light .style-card,
+.app.light .styles-list button,
+.app.light .source,
+.app.light .mobile-tools button {
+  background: var(--sb-panel-strong) !important;
+  color: var(--sb-text);
+}
+.app.light .hero p,
+.app.light .section-heading p,
+.app.light .left-panel h3,
+.app.light .inspector h3,
+.app.light .inspector label,
+.app.light .stage-label,
+.app.light .zoom {
+  color: var(--sb-muted);
+}
+.app.light .inspector input[placeholder] {
+  background: #fff;
+  color: var(--sb-text);
+  border-color: var(--sb-border);
+}
+.app button {
+  cursor: pointer;
+}

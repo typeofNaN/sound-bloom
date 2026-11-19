@@ -1,0 +1,119 @@
+.inspector label {
+  display: block;
+  color: var(--sb-muted);
+  font-size: 10px;
+  margin: 16px 7px;
+}
+.inspector label output {
+  float: right;
+  color: var(--sb-text);
+}
+.inspector input[type='text'],
+.inspector input:not([type]) {
+  width: 100%;
+  margin-top: 7px;
+}
+.inspector input {
+  accent-color: var(--sb-accent);
+}
+.inspector input[type='range'] {
+  width: 100%;
+  margin-top: 11px;
+  height: 2px;
+}
+.inspector input[placeholder] {
+  background: #2c241c;
+  border: 1px solid #ffffff10;
+  color: #eee;
+  padding: 10px;
+  border-radius: 6px;
+  outline: none;
+}
+@theme inline {
+  --color-input: var(--sb-border);
+  --color-primary: var(--sb-accent);
+  --color-popover: var(--sb-panel);
+  --color-popover-foreground: var(--sb-text);
+  --color-accent-foreground: var(--sb-surface);
+}
+.palette-options {
+  @apply mx-[7px] grid grid-cols-2 gap-2;
+}
+.inspector label.palette-option {
+  @apply m-0 flex min-h-10 cursor-pointer items-center gap-2 rounded-md border border-input px-2;
+}
+.palette-option:has([data-state='checked']) {
+  border-color: var(--sb-accent);
+}
+.randomize {
+  margin: 22px 7px;
+  width: calc(100% - 14px);
+  padding: 11px !important;
+  border: 1px solid var(--sb-border) !important;
+  border-radius: 7px !important;
+  color: var(--sb-accent);
+  font-size: 11px;
+  background: color-mix(in srgb, var(--sb-accent) 9%, var(--sb-panel)) !important;
+}
+.randomize svg {
+  width: 13px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.player {
+  grid-column: 1/-1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 24px;
+  background: var(--sb-panel);
+  border-top: 1px solid #ffffff0e;
+  font-size: 9px;
+  color: var(--sb-muted);
+}
+.play {
+  width: 38px;
+  height: 38px;
+  border-radius: 50% !important;
+  background: var(--sb-accent) !important;
+  color: var(--sb-surface) !important;
+  display: grid;
+  place-items: center;
+}
+.play svg {
+  width: 15px;
+}
+.timeline {
+  height: 2px;
+  background: #e3cdb92d;
+  flex: 1;
+  position: relative;
+}
+.timeline i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #c67b38, #edba71);
+}
+.timeline b {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  top: -3px;
+}
+.levels {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  width: 100px;
+}
+.levels i {
+  display: block;
+  width: 2px;
+  background: #c08c52;
+  border-radius: 2px;
+}
+.mobile-tools {
+  display: none;
+}

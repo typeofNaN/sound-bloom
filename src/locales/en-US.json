@@ -1,0 +1,30 @@
+{
+  "brand": {
+    "name": "SoundBloom",
+    "cn": "SoundBloom",
+    "slogan": "Let every sound bloom.",
+    "description": "Transform every sound into a singular piece of generative art and give the invisible a visible form."
+  },
+  "nav": { "home": "Home", "create": "Create", "styles": "Art styles", "projects": "My works" },
+  "studio": {
+    "canvas": "Sound canvas",
+    "save": "Save work",
+    "export": "Export",
+    "audio": "Audio source",
+    "parameters": "Artwork parameters"
+  },
+  "styles": {
+    "lunar": "Lunar",
+    "galaxy": "Galaxy",
+    "bloom": "Bloom",
+    "landscape": "Landscape",
+    "fluid": "Fluid",
+    "cityscape": "Cityscape",
+    "treeRing": "Tree Ring",
+    "mandala": "Mandala",
+    "ink": "Ink",
+    "neon": "Neon",
+    "terrain": "Terrain",
+    "planet": "Planet"
+  }
+}

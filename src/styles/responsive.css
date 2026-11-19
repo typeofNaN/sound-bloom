@@ -1,0 +1,139 @@
+@media (max-width: 900px) {
+  .nav nav > a {
+    display: none;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 130px;
+  }
+  .hero-copy {
+    z-index: 2;
+  }
+  .hero-art {
+    position: absolute;
+    width: 110vw;
+    right: -45vw;
+    opacity: 0.6;
+  }
+  .hero h1 {
+    font-size: 58px;
+    max-width: 500px;
+  }
+  .hero p {
+    max-width: 430px;
+  }
+  .style-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .section-heading {
+    display: block;
+  }
+  .section-heading p {
+    margin-top: 25px;
+  }
+  .studio {
+    grid-template: 58px minmax(0, 1fr) 68px / minmax(0, 1fr);
+  }
+  .studio-top {
+    grid-column: 1;
+  }
+  .left-panel,
+  .inspector {
+    display: none;
+  }
+  .canvas-stage {
+    padding: 50px 16px 98px;
+  }
+  .player {
+    grid-column: 1;
+  }
+  .project-name {
+    display: none;
+  }
+  .top-actions button:not(.primary) {
+    display: none;
+  }
+  .mobile-tools {
+    position: absolute;
+    bottom: 34px;
+    left: 12px;
+    right: 12px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+  .mobile-tools button {
+    min-width: 0;
+    border: 1px solid #ffffff10 !important;
+    background: var(--sb-panel-strong) !important;
+    border-radius: 9px !important;
+    padding: 10px 7px !important;
+    color: var(--sb-text);
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .mobile-tools svg {
+    width: 13px;
+  }
+  .zoom {
+    bottom: 12px;
+  }
+}
+@media (max-width: 560px) {
+  .hero {
+    padding: 120px 22px 80px;
+  }
+  .hero h1 {
+    font-size: 50px;
+  }
+  .hero p {
+    font-size: 14px;
+  }
+  .hero-art {
+    width: 150vw;
+    right: -80vw;
+  }
+  .nav {
+    padding: 0 20px;
+  }
+  .style-section {
+    padding: 90px 20px;
+  }
+  .style-grid {
+    grid-template-columns: 1fr;
+  }
+  .style-card canvas {
+    aspect-ratio: 1.2;
+  }
+  .process {
+    overflow: auto;
+    white-space: nowrap;
+    padding: 34px 20px;
+  }
+  .app > footer {
+    display: block;
+    padding: 45px 20px;
+  }
+  .app > footer p {
+    margin: 24px 0;
+  }
+  .studio-top {
+    padding: 0 10px;
+  }
+  .top-actions .primary {
+    padding: 10px 14px !important;
+  }
+  .canvas-stage {
+    padding-inline: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}

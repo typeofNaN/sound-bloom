@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>SoundBloom · 声生</title>
+  <defs>
+    <linearGradient id="ink" x1="7" y1="43" x2="54" y2="19" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#bc8269"/>
+      <stop offset=".52" stop-color="#e2bea1"/>
+      <stop offset="1" stop-color="#f3e5cf"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="#322925"/>
+  <path d="M7 40c3 0 3-5 5-5s2 9 5 9 3-19 7-19 3 26 8 26c6 0 2-20 12-30"
+        fill="none" stroke="url(#ink)" stroke-width="3.8" stroke-linecap="round"/>
+  <path d="M37 33C35 21 42 13 56 10c-2 13-7 23-19 23Z" fill="#ead6ba"/>
+  <path d="M38 32c3-6 7-11 12-15" fill="none" stroke="#322925" stroke-width="1.7" stroke-linecap="round"/>
+</svg>

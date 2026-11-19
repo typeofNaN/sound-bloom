@@ -1,0 +1,30 @@
+{
+  "brand": {
+    "name": "SoundBloom",
+    "cn": "声生",
+    "slogan": "让声音，自由生长。",
+    "description": "将每一段声音转化为独一无二的艺术作品，让无形的声音拥有可见的形状。"
+  },
+  "nav": { "home": "首页", "create": "开始创作", "styles": "艺术风格", "projects": "我的作品" },
+  "studio": {
+    "canvas": "声音画布",
+    "save": "保存作品",
+    "export": "导出作品",
+    "audio": "声音来源",
+    "parameters": "作品参数"
+  },
+  "styles": {
+    "lunar": "月光声纹",
+    "galaxy": "星空粒子",
+    "bloom": "音之花",
+    "landscape": "山川声景",
+    "fluid": "流体声波",
+    "cityscape": "频谱之城",
+    "treeRing": "声音年轮",
+    "mandala": "曼陀罗",
+    "ink": "声音墨迹",
+    "neon": "霓虹声场",
+    "terrain": "三维声景",
+    "planet": "声音星球"
+  }
+}

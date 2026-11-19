@@ -1,0 +1,9 @@
+node_modules
+dist
+output
+docs/superpowers
+.DS_Store
+coverage
+playwright-report
+.playwright-cli
+*.tsbuildinfo

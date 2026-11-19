@@ -1,0 +1,76 @@
+.app {
+  color: var(--sb-text);
+  background: var(--sb-surface);
+  color-scheme: dark;
+}
+.app.light {
+  color-scheme: light;
+  --sb-surface: #f4efe5;
+  --sb-panel-strong: #e9e0d3;
+  --sb-muted: #675a52;
+  --sb-border: #66513e38;
+}
+.app .brandmark {
+  border: 0;
+}
+.brandmark img {
+  width: 100%;
+  height: 100%;
+}
+.app .primary {
+  background: var(--sb-accent) !important;
+  color: #30231d !important;
+}
+.app.light .primary {
+  color: white !important;
+}
+.app.light
+  :is(
+    .project-name,
+    .source small,
+    .source-grid button,
+    .stage-label b,
+    .inspector output,
+    .player,
+    footer p,
+    footer a
+  ) {
+  color: var(--sb-muted);
+}
+.app.light .styles-list button.selected {
+  background: color-mix(in srgb, var(--sb-accent) 12%, var(--sb-panel)) !important;
+  color: var(--sb-text);
+}
+.app.light .randomize {
+  color: var(--sb-accent);
+}
+.app.light .canvas-frame {
+  box-shadow: 0 16px 44px #40332c24;
+  border-color: var(--sb-border);
+}
+.app :focus-visible {
+  outline: 2px solid var(--sb-accent);
+  outline-offset: 3px;
+}
+
+.app :is(.studio-top, .left-panel, .inspector, .player) {
+  background: var(--sb-panel);
+  border-color: var(--sb-border);
+}
+.app :is(.top-actions, .styles-list, .source-grid) button:hover {
+  border-color: var(--sb-accent) !important;
+}
+.app .inspector :is(label, h3),
+.app .left-panel h3 {
+  color: var(--sb-muted);
+}
+.app .inspector [data-slot='input'] {
+  background: var(--sb-panel);
+  color: var(--sb-text);
+  border-color: var(--sb-border);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .app details[open] > p {
+    animation: page-enter 180ms ease-out both;
+  }
+}

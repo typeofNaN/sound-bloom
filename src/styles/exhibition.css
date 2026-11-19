@@ -1,0 +1,156 @@
+/* The cover pairs the sound's envelope with its full-size print. */
+.exhibit {
+  display: grid;
+  gap: 1.5rem;
+  padding-block: clamp(2rem, 5vw, 5rem);
+  border-top: 1px solid var(--sb-border);
+}
+.exhibit-copy {
+  align-self: center;
+  min-width: 0;
+}
+.sample-signature {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 32px;
+  margin-bottom: 2rem;
+  color: var(--sb-accent);
+}
+.sample-signature i {
+  width: 2px;
+  background: currentColor;
+}
+.exhibit .bloom-heading {
+  font-family: 'Noto Serif SC', 'Songti SC', SimSun, serif;
+  font-size: clamp(3.3rem, 6.4vw, 6.2rem);
+  line-height: 1.16;
+  letter-spacing: -0.055em;
+}
+.exhibit .bloom-heading span,
+.exhibit .bloom-heading em {
+  display: block;
+}
+.exhibit .bloom-heading em {
+  color: var(--sb-accent);
+  font-family: 'Zhi Mang Xing', 'Kaiti SC', KaiTi, serif;
+  font-style: normal;
+}
+.exhibit .bloom-heading:lang(en) {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: normal;
+  font-size: clamp(3.3rem, 5.6vw, 5.5rem);
+}
+.exhibit .bloom-heading:lang(en) em {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+}
+.exhibit-print {
+  aspect-ratio: 1.25;
+}
+.exhibit-print::after {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 1px solid color-mix(in srgb, var(--sb-text) 16%, transparent);
+  pointer-events: none;
+}
+.exhibit-note {
+  grid-column: 1/-1;
+  border-block: 1px solid var(--sb-border);
+  padding-block: 0.6rem;
+}
+.gallery-print > span {
+  border-bottom: 1px solid var(--sb-border);
+  padding-bottom: 1rem;
+}
+.gallery-print > span > span:first-child {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 2vw, 1.5rem);
+  line-height: 1.35;
+}
+.app .brand {
+  font-family: 'Playfair Display', 'Songti SC', Georgia, serif;
+  letter-spacing: -0.035em;
+}
+.app .studio :is(.left-panel, .inspector) h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.015em;
+  border-bottom: 1px solid var(--sb-border);
+  padding-bottom: 0.65rem;
+}
+.canvas-stage {
+  background-image: radial-gradient(var(--sb-border) 0.8px, transparent 0.8px);
+  background-size: 8px 8px;
+}
+@media (min-width: 850px) {
+  .exhibit {
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+    column-gap: clamp(2rem, 5vw, 5rem);
+  }
+}
+
+.mast-nav,
+.mast-links,
+.mast-tools,
+.mast-links a {
+  display: flex;
+  align-items: center;
+}
+.mast-nav {
+  gap: 1.35rem;
+  color: var(--sb-text);
+}
+.mast-links {
+  gap: 1.3rem;
+}
+.mast-links a {
+  gap: 0.25rem;
+  min-height: 44px;
+  font-size: 0.875rem;
+}
+.mast-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.mast-tools {
+  position: relative;
+  padding-left: 1rem;
+}
+.mast-tools::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 25%;
+  height: 50%;
+  border-left: 1px solid color-mix(in srgb, var(--sb-text) 23%, transparent);
+}
+.mast-tools button {
+  width: 44px;
+  height: 44px;
+  color: var(--sb-muted);
+}
+.mast-tools button:hover {
+  background: color-mix(in srgb, var(--sb-text) 8%, transparent);
+  color: var(--sb-text);
+}
+.mast-tools span {
+  font:
+    600 0.75rem/1 system-ui,
+    sans-serif;
+  letter-spacing: 0.045em;
+}
+@media (max-width: 620px) {
+  .mast-nav {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  .mast-tools {
+    padding-left: 0;
+  }
+  .mast-tools::before {
+    display: none;
+  }
+}
