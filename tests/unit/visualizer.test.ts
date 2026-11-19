@@ -14,6 +14,7 @@ it('paints theme colors into the actual canvas bitmap', () => {
     restore: noop,
     translate: noop,
     rotate: noop,
+    scale: noop,
     beginPath: noop,
     lineTo: noop,
     moveTo: noop,
@@ -34,8 +35,8 @@ it('paints theme colors into the actual canvas bitmap', () => {
   expect(addColorStop).toHaveBeenCalledWith(1, '#221d1b');
 });
 
-it('offers twenty-two deterministic audio-reactive styles', () => {
-  expect(styleIds).toHaveLength(22);
+it('offers thirty-six deterministic audio-reactive styles', () => {
+  expect(styleIds).toHaveLength(36);
   const quiet = analyzeAudio({ samples: new Float32Array(64), sampleRate: 64, channels: 1, bucketCount: 32 });
   const loud = analyzeAudio({
     samples: Float32Array.from({ length: 64 }, (_, i) => Math.sin(i)),
@@ -59,6 +60,20 @@ it.each([
   'pendulum',
   'mosaic',
   'corona',
+  'fern',
+  'nautilus',
+  'wind-chimes',
+  'butterfly',
+  'rain',
+  'coral',
+  'dunes',
+  'crystals',
+  'score',
+  'hourglass',
+  'lissajous',
+  'fan',
+  'punch-card',
+  'string-bridge',
 ] as const)('%s changes its geometry with the audio', (style) => {
   const points: number[][] = [];
   const record = (...coordinates: number[]) => points.push(coordinates);
@@ -70,6 +85,7 @@ it.each([
     restore: noop,
     translate: noop,
     rotate: noop,
+    scale: noop,
     beginPath: noop,
     stroke: noop,
     fill: noop,
@@ -77,6 +93,7 @@ it.each([
     moveTo: record,
     lineTo: record,
     arc: record,
+    quadraticCurveTo: record,
   } as unknown as CanvasRenderingContext2D;
   const render = (amplitude: number) => {
     points.length = 0;

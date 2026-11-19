@@ -1,6 +1,33 @@
 import type { AudioFeatures } from '../audio/types';
 import { createSeededRandom } from '../algorithms/prng';
 
+import { drawFern, drawNautilus, drawWindChimes } from './acousticStudies';
+
+import { drawButterfly, drawRain, drawCoral, drawDunes, drawCrystals } from './prints/nature';
+import {
+  drawScore,
+  drawHourglass,
+  drawLissajous,
+  drawFan,
+  drawPunchCard,
+  drawStringBridge,
+} from './prints/instruments';
+const studies = {
+  fern: drawFern,
+  nautilus: drawNautilus,
+  'wind-chimes': drawWindChimes,
+  butterfly: drawButterfly,
+  rain: drawRain,
+  coral: drawCoral,
+  dunes: drawDunes,
+  crystals: drawCrystals,
+  score: drawScore,
+  hourglass: drawHourglass,
+  lissajous: drawLissajous,
+  fan: drawFan,
+  'punch-card': drawPunchCard,
+  'string-bridge': drawStringBridge,
+};
 export const styleIds = [
   'lunar',
   'galaxy',
@@ -24,8 +51,25 @@ export const styleIds = [
   'pendulum',
   'mosaic',
   'corona',
+  'fern',
+  'nautilus',
+  'wind-chimes',
+  'butterfly',
+  'rain',
+  'coral',
+  'dunes',
+  'crystals',
+  'score',
+  'hourglass',
+  'lissajous',
+  'fan',
+  'punch-card',
+  'string-bridge',
 ] as const;
 export type StyleId = (typeof styleIds)[number];
+function isStudy(id: StyleId): id is keyof typeof studies {
+  return Object.hasOwn(studies, id);
+}
 export interface VisualPoint {
   x: number;
   y: number;
@@ -85,11 +129,13 @@ export function drawArtwork(
   ctx.save();
   ctx.translate(width / 2, height / 2);
   const panoramic = ['landscape', 'terrain', 'cityscape', 'neon', 'fluid', 'ink'].includes(style);
-  if (!panoramic && style !== 'loom' && style !== 'tide') ctx.rotate(phase * 0.04);
+  if (!isStudy(style) && !panoramic && style !== 'loom' && style !== 'tide') ctx.rotate(phase * 0.04);
   const wave = features.envelope;
   const energyAt = (fraction: number) =>
     Math.min(1, wave[Math.floor(fraction * wave.length) % wave.length] ?? 0);
-  if (style === 'pendulum' || style === 'mosaic' || style === 'corona') {
+  if (isStudy(style)) {
+    studies[style]({ ctx, unit, colors, energyAt, density, phase, seed });
+  } else if (style === 'pendulum' || style === 'mosaic' || style === 'corona') {
     const count = Math.max(12, Math.round(48 * density));
     for (let i = 0; i < count; i++) {
       const t = i / count;

@@ -22,6 +22,20 @@ export const names: Record<StyleId, string> = {
   pendulum: '声摆阵列',
   mosaic: '菱格镶嵌',
   corona: '日冕声针',
+  fern: '蕨叶声谱',
+  nautilus: '螺室声纹',
+  'wind-chimes': '悬音风铃',
+  butterfly: '蝶翼脉络',
+  rain: '雨痕涟漪',
+  coral: '珊瑚声枝',
+  dunes: '层沙声丘',
+  crystals: '晶簇声柱',
+  score: '浮音手稿',
+  hourglass: '流声沙漏',
+  lissajous: '示波双弦',
+  fan: '折扇声屏',
+  'punch-card': '声孔纸带',
+  'string-bridge': '交弦声桥',
 };
 export const palettes = [
   ['#AC6955', '#BAA07E', '#877B67'],
@@ -56,6 +70,32 @@ export const styleDescriptions = [
   ['声音越强，悬垂的摆线越长。', 'Louder passages lengthen hanging pendulums.'],
   ['不同时间段的响度改变菱形大小。', 'Loudness scales each diamond tile.'],
   ['强音把环形声针推向外侧。', 'Loud passages push the radial needles outward.'],
+  ['沿叶轴读取节奏，强音处的小叶舒展得更远。', 'Leaflets extend farther from the stem at louder moments.'],
+  [
+    '每一小段声音撑开一格螺室，沿螺旋向外生长。',
+    'Each passage shapes a chamber along an outward-growing spiral.',
+  ],
+  [
+    '每根铃管对应一段声音，响度决定管长和摆幅。',
+    'Each chime samples a passage. Its loudness sets the tube length and sway.',
+  ],
+  ['强音将两翼的细脉向外推开。', 'Louder moments extend the veins of each wing.'],
+  [
+    '声音越响，雨丝越长，落点的涟漪越宽。',
+    'Loudness sets the length of each drop and the width of its ripple.',
+  ],
+  ['每一次分枝的角度取自一段声音的响度。', 'Each fork opens at an angle sampled from the recording.'],
+  ['响度起伏抬高不同位置的沙脊。', 'Changes in loudness lift the crests of layered dunes.'],
+  ['不同时间段的能量决定晶柱的高度。', 'Energy in successive passages sets the height of each crystal.'],
+  ['响度决定符头在五线谱上的高低。', 'Loudness sets each note’s position on the staff.'],
+  ['强音处沙粒变粗，分布也更宽。', 'Louder passages create larger grains and a wider stream.'],
+  ['声音拉伸交错的双频曲线。', 'The envelope stretches a pair of interlaced oscillations.'],
+  ['每道扇褶的长度对应一段声音的强弱。', 'Each pleat extends according to the loudness of one passage.'],
+  [
+    '从左向右读，每列醒目的孔位记录一段响度。',
+    'Read left to right: the bold slot in each column records its loudness.',
+  ],
+  ['声音越强，两端之间的弦线弯曲得越深。', 'Louder passages increase the bend between string anchors.'],
 ];
 
 export const styleName = (id: StyleId, en: boolean) =>

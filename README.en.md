@@ -8,7 +8,7 @@ Turn a recording into a piece of generative art. SoundBloom uses changes in audi
 
 1. Switch between samples on the home page to see how rhythm changes the petals. Choose **Start creating** to open `/#/studio`.
 2. Record a sound, upload an audio file or use a built-in sample. Use the waveform timeline to play and seek.
-3. Choose from 22 art styles. Adjust the palette, density, random seed and audio sensitivity, then add a title and choose its typeface.
+3. Choose from 36 art styles. Adjust the palette, density, random seed and audio sensitivity, then add a title and choose its typeface.
 4. Choose **Export artwork** to download a PNG of the current frame or a silent, four-second looping GIF at 480 × 480. On compatible devices, send the image through the system share sheet. For WeChat or Moments, select the saved image from your album. The share panel also links to Weibo, RedNote, Douyin, X, Instagram and Facebook, where you can attach the exported file yourself.
 
 ## Local development
