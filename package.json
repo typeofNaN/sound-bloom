@@ -1,8 +1,21 @@
 {
-  "name": "soundbloom",
+  "name": "sound-bloom",
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "author": {
+    "name": "typeofNaN",
+    "url": "https://github.com/typeofNaN",
+    "email": "dmdefine6@gmail.com"
+  },
+  "homepage": "https://github.com/typeofNaN/sound-bloo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/typeofNaN/sound-bloo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/typeofNaN/sound-bloo/issues"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
